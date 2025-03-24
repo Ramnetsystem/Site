@@ -1,0 +1,118 @@
+ENVIAR EMAIL COM EMAILJS 
+
+
+
+import React, { useState } from "react";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
+
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError("");
+    
+    try {
+      // Configuração do EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      // Substitua com suas próprias credenciais do EmailJS
+      const response = await emailjs.send(
+        'YOUR_SERVICE_ID', // ID do serviço
+        'YOUR_TEMPLATE_ID', // ID do template
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Chave pública
+      );
+
+      if (response.status === 200) {
+        setSubmitSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      }
+    } catch (error) {
+      setSubmitError("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.");
+      console.error('Erro ao enviar email:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Resto do seu código permanece o mesmo...
+  // (Mantendo todo o JSX e outros elementos iguais)
+
+  -------------------------------------------------------------------------------------------------------------------------------||------------
+
+    Whats fllutuante 
+  <a 
+        href="https://api.whatsapp.com/send?phone=5514997415648" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
+        aria-label="Contato via WhatsApp"
+      >
+        <FaWhatsapp className="h-6 w-6" />
+      </a>
+
+
+
+import emailjs from "@emailjs/browser";
+
+
+
+
+
+
+
+
+
+          try {
+      await emailjs.send(
+        import.meta.env.VITE_SERVICE_ID, // Substitua pelo seu Service ID
+        import.meta.env.VITE_TEMPLATE_ID, // Substitua pelo seu Template ID
+        formData,
+        import.meta.env.VITE_USER_ID // Substitua pelo seu User ID
+      );
+      setSubmitSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      setSubmitError("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };  

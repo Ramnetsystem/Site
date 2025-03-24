@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+@theme{
+  --font-primary: "Monomakh", "serif";
+  --font-poppis: 'Poppins', sans-serif;
+  --color-custom-orange: #ef4b24;
+}
+
+
