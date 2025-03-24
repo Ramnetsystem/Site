@@ -1,6 +1,9 @@
 
 const MenuList = () => {
 
+  const scrollToHome = () => {
+    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+  };
 
     const scrollToAbout = () => {
         document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
@@ -21,7 +24,7 @@ const MenuList = () => {
 
     return (
         <ul className="flex flex-col items-center justify-center gap-6 sm:flex-row p-2 font-bold text-2xl sm:text-base">
-            <li className="cursor-pointer hover:text-orange-900">Pagina Principal</li>
+            <li className="cursor-pointer hover:text-orange-900" onClick={scrollToHome}>Pagina Principal</li>
             <li className="cursor-pointer hover:text-orange-900" onClick={scrollToAbout}>Sobre Nós </li>
             <li className="cursor-pointer hover:text-orange-900" onClick={scrollToServices}>Serviços</li>
             <li className="cursor-pointer hover:text-orange-900" onClick={scrollToClients}>Clientes</li>
