@@ -78,8 +78,8 @@ const ContactPage: React.FC = () => {
                     <FaPhone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Telefone</h3>
-                    <p className="mt-1 text-gray-600"> 3641-8000   </p>
+                    <h3 className="text-lg font-medium text-gray-900">Telefone Fixo</h3>
+                    <p className="mt-1 text-gray-600"> 3604-8000   </p>
                   </div>
                 </div>
 
