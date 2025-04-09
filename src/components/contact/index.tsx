@@ -79,7 +79,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Telefone</h3>
-                    <p className="mt-1 text-gray-600">+55 (14) 99741-5648</p>
+                    <p className="mt-1 text-gray-600"> 3641-8000   </p>
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
                     <h3 className="text-lg font-medium text-gray-900">Endereço</h3>
                     <p className="mt-1 text-gray-600">
                       Avenida Industrial José E Ortigosa 688<br />
-                      Barra Bonita - SP, 17340000
+                      Barra Bonita - SP, 17347-614
                     </p>
                   </div>
                 </div>
