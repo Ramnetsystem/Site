@@ -78,8 +78,8 @@ const ContactPage: React.FC = () => {
                     <FaPhone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Telefone Fixo</h3>
-                    <p className="mt-1 text-gray-600"> 3604-8000   </p>
+                    <h3 className="text-lg font-medium text-gray-900">Telefone</h3>
+                    <p className="mt-1 text-gray-600"> +55 (14) 3604-8000   </p>
                   </div>
                 </div>
 
@@ -131,7 +131,7 @@ const ContactPage: React.FC = () => {
                     <span className="font-medium text-gray-950">Sexta:</span> 7h às 16:30h
                   </p>
                   <p className="text-gray-600">
-                    <span className="font-medium text-gray-950">Sábado, Domingo e Feriados:</span> Fechado
+                    <span className="font-medium text-gray-950">Sábados, Domingos e Feriados:</span> Fechado
                   </p>
                 </div>
               </div>
